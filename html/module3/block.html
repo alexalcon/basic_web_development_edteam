@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Module 3 - Block Elements</title>
+
+		<style>
+			div {
+				border: 2px solid black;
+				margin: 10px;
+				padding: 10px;
+				background-color: lightgray;
+			}
+		</style>
+    </head>
+    
+    <body>
+        <!-- block elements are  -->
+        <!-- 
+            block elements are capable to fit the full width available
+            they always start on a new line
+                
+                * section elements
+                    nav, aside, section, header, footer, main, article, 
+                * grouping elements 
+                    div, p, hr, pre, blockquote, figure, figcaption
+                * title elements
+                    h1, h2, h3, h4, h5, h6
+        -->
+
+	   	<!-- block elements example and inline elements example -->
+       	<!-- ─────────────────────────────────────────────────────────── -->  
+	  	<!-- 
+			inline elements do not start on a new line and 
+		    only take up as much width as necessary 
+	   	-->
+       	<span>Some</span>
+       	<span>text</span>
+
+       	<hr>
+		
+	   	<!-- block elements example (paragraphs elements) -->
+	   	<p>Some</p>
+       	<p>text</p>
+
+		<hr>
+
+	   	<!-- a block element can not be in a line element -->
+	   	<!-- this a bad (and error) practice-->
+	   	<!--
+				the problem with HTML and CSS is that they do not warm 
+				you when you do something wrong syntactically, allowing 
+				you to create bad practices, that seems good, but that 
+				could lead to unexpected results
+
+				this is the main reason to use an HTML validator tool like:
+				https://validator.w3.org/
+	   	-->
+	   	<span>Some<p>text</p></span> <!-- incorrect -->
+	   	<p>Some<span> text</span></p> <!-- correct -->
+	   	<!-- ─────────────────────────────────────────────────────────── -->  
+
+	   	<hr>
+
+	   	<!-- break lines are not respected in HTML -->
+	   	<blockquote>
+				This is a blockquote.
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptatibus inventore tempora cupiditate aperiam libero, 	veritatis laboriosam, vel, qui illo obcaecati assumenda quis ad. Ab quam eos fugit sint libero.
+	   	</blockquote>
+
+	   	<!-- we can achieve (respect) break lines with the <pre> tag -->
+	   	<pre>
+This is a blockquote.
+			Lorem ipsum dolor 
+			sit 
+amet consectetur adipisicing
+			elit. Facere voluptatibus inventore tempora cupiditate
+			aperiam libero, veritatis laboriosam, vel, qui illo obcaecati 
+assumenda quis 
+			ad. 
+Ab quam eos fugit sint libero.
+	   	</pre>
+
+	   	<hr>
+
+	   	<pre>
+			<code>
+				&lt;h1&gt;This is a heading 1&lt;/h1&gt;
+				
+				&lt;p&gt;Lorem ipsum, dolor sit amet consectetur 
+				adipisicing elit. Voluptatum porro cum nobis ipsa unde a! 
+				Itaque doloremque voluptatibus deserunt impedit quis eligendi, 
+				minima earum inventore, odio totam id pariatur atque?&lt;/p&gt;
+
+				// counter-controlled iteration in C++
+				for(int i = 0 ; i &lt; 10 ; ++i) {
+				    std::cout &lt;&lt; i &lt;&lt; "\n" &lt;&lt; std::endl;
+				}
+			</code>
+		</pre>
+
+		<div> <!-- a "CSS style" block grouping element -->
+			This is a &lt;div&gt; element. <br>
+			&lt;div&gt; is not a semantic element. <br>
+			It is a generic container for flow content.
+		</div>
+
+		<div>
+			<pre>
+				<code>
+					&lt;h1&gt;This is a heading 1&lt;/h1&gt;
+
+					&lt;p&gt;Lorem ipsum, dolor sit amet consectetur 
+					adipisicing elit. Voluptatum porro cum nobis ipsa unde a! 
+					Itaque doloremque voluptatibus deserunt impedit quis eligendi, 
+					minima earum inventore, odio totam id pariatur atque?&lt;/p&gt;
+
+					// counter-controlled iteration in C++
+					for(int i = 0 ; i &lt; 10 ; ++i) {
+					    std::cout &lt;&lt; i &lt;&lt; "\n" &lt;&lt; std::endl;
+					}
+				</code>
+			</pre>
+		</div>
+    </body>
+</html>
